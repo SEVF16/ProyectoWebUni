@@ -1,0 +1,18 @@
+<div class="row mx-2 my-2 ">
+    {% for product in entity%} 
+    <div class="col-lg-3 col-md-6 col-12 mt-5 molde-producto">
+      <div class="card text-center">
+          <div class="card-header bg-dark bg-gradient text-center text-white-50">
+              <span class="nombre-producto">{{product.nombre}}</span>
+          </div>
+          <div class="card-body">
+              <img src="{{product.imagen.url}}" style ="width: 75%; height:25%; border-radius: 6px; opacity: 0.85;" class="card-img-top imagen-producto" alt="...">
+          </div>
+          <div class="card-footer">
+              <a href="{% url 'detalle' product.idProducto%}" class="btn btn-primary btn-ver-producto">Ver Producto</a>
+          </div>
+      </div>
+    </div>
+    
+    {% endfor %}
+</div>

@@ -1,0 +1,11 @@
+{% extends 'layouts/navegador.html'%}
+    {% block contenido %}   
+        
+      <main class="">
+        <h1>{{categoria.nombreCategoria}}</h1>
+            {% include 'articulos/lista.html'%}
+
+            {% include 'articulos/paginacion.html' %}
+        
+    {% endblock %}  
+ 

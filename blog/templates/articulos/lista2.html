@@ -1,0 +1,28 @@
+{% extends 'articulos/homeadmin.html'%}
+
+{% block contenido %}
+<div class="row mx-2 my-2 ">
+    {% for product in entity %} 
+    <div class="col-lg-3 col-md-6 col-12 mt-5 molde-producto">
+      <div class="card text-center">
+          <div class="card-header bg-dark bg-gradient text-center text-white-50">
+              <span class="nombre-producto">{{product.nombre}}</span>
+          </div>
+          <div class="card-body">
+              <img src="{{product.imagen.url}}" class="card-img imagen-producto" alt="...">
+          </div>
+          <div class="card-footer">
+              {% if perms.blog.change_articulo %}
+              <a href="{% url 'modificar' product.idProducto%}" class="btn btn-primary btn-ver-producto">Modificar</a>
+              {% endif %}
+              {% if perms.blog.delete_articulo %}
+              <a href="{% url 'eliminar' product.idProducto%}" class="btn btn-danger btn-ver-producto">Eliminar</a>
+              {% endif %}
+          </div>
+      </div>
+    </div>
+    
+    {% endfor %}
+    {% include 'articulos/paginacion.html' %}
+</div>
+{% endblock %}  

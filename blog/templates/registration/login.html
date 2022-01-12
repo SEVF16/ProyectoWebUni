@@ -1,0 +1,16 @@
+{% extends 'articulos/homeadmin.html'%}
+
+{% block contenido %}     
+  <main>
+    <div class="container-fluid col-lg-5 col-md-6 col py-5">
+      <h1 class="fst-italic fw-bold">Iniciar Sesión</h1>
+      <form class="col s6" method="POST" id="form-login">
+         {% csrf_token %}
+         {{form}}
+         <hr>
+        <button type="submit" class="btn btn-primary">Iniciar sesión</button>        
+      </form>
+    </div>
+  </main>
+{% endblock%}
+ 

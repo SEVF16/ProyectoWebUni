@@ -1,0 +1,77 @@
+
+    {% extends 'layouts/navegador.html'%}
+    {% load static%}
+    
+    {% block contenido%}
+    <main class="mt-5 mb-5 ">
+      <!--bloque carrusel-->
+      {% for product in articulos %} 
+      <div class="row mb-4 ms-2 me-2 justify-content-center">
+        <div id="carrusel" class="col-12 col-md-6 col-lg-6 justify-content-end px-0">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <a href="{% url 'detalle' product.idProducto%}">
+                      <img src="{{product.imagen.url}}" class="d-block w-100" alt="...">
+                    </a>                    
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+        </div>
+      </div>
+      {% endfor%}
+      <!--Bloque de cartas-->
+      <div class="card-group ms-2 me-2" id="cards">
+        <div class="card me-2">
+          <a href="naranjo-rojo-azul.html">
+            <img src="{% static 'img/pexels-steve-johnson-1269968.jpg' %}" class="card-img-top " alt="...">
+          </a>          
+          <div class="card-body">
+            <h5 class="card-title">Naranja, rojo y azul </h5>
+            <p class="card-text">Pintura abstracta por el artista Artista 1, técnica acuarela sobre tela</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">Septiembre 27, 2018 </small>
+          </div>
+        </div>
+        <div class="card me-2">
+          <a href="botes-color.html">
+            <img src="{% static 'img/pexels-thiago-japyassu-929032.jpg' %}" class="card-img-top" alt="...">
+          </a>          
+          <div class="card-body">
+            <h5 class="card-title">Botes de color</h5>
+            <p class="card-text">Fotografía digital, Artista 2</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">Marzo 10, 2018</small>
+          </div>
+        </div>
+        <div class="card">
+          <a href="muro-grafiti.html">
+            <img src="{% static 'img/pexels-toa-heftiba-şinca-1194420.jpg' %}" class="card-img-top" alt="...">
+          </a>          
+          <div class="card-body">
+            <h5 class="card-title">Muro con grafiti</h5>
+            <p class="card-text">Fotografía selectiva, Artista 3.</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">Abril 14, 2017</small>
+          </div>
+        </div>
+      </div>
+    </main>
+    {% endblock%}
+    

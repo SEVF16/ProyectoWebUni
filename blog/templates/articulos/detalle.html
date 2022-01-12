@@ -1,0 +1,76 @@
+{% extends 'layouts/navegador.html'%}
+
+
+{% block contenido%}
+
+<main>
+    <div class="row  my-2 mx-2">
+      <!--Bloque carrusel-->
+      <div class="image col-12 col-md-6 col-lg-5  my-2 mx-2" id="marco-imagen">
+        <img src="{{articulo.imagen.url}}" style ="width: 100%; border-radius: 6px; opacity: 0.85;">
+      </div>
+      <!--Bloque ficha técnica-->
+      <div class="col col-md col-lg mt-3 mt-md-0 my-2 mx-2">
+        <div >
+          <div class=" text-black text-left my-2 mx-2">
+                <span class="fs-1">{{articulo.nombre}}</span>
+          </div>
+          <div class="card-body fs-4">
+            <div>
+              <table class="table table-bordered table-hover table-stripped">
+                <tbody>
+                  <tr>
+                      <td>Descripcion:</td><td>{{articulo.descripcion|safe}}</td>
+                  </tr>
+                  <tr>
+                      <td>Fecha:</td><td>{{articulo.fecha_crea}}</td>
+                  </tr>
+                  <tr>
+                      <td>Artista:</td><td>{{articulo.artista}}</td>
+                  </tr>
+                </tbody>
+              </table>
+          </div>    
+        </div>
+      </div>
+    </div>
+    <!--Bloque comentarios / ficha técnica-->
+    <div class="row ms-3  my-2 mx-2">
+      <div class="col-lg-6 col-md-6 col-12">
+          <ul class="nav nav-tabs  my-2 mx-2">
+                <li><a>COMENTARIOS</a></li>
+          </ul>
+          <div class="form-floating">
+              <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+              <label for="floatingTextarea2">Comments</label>
+          </div>
+          <div class="col- my-2 mx-2">
+              <button type="submit" class="btn btn-success my-2 mx-2">Enviar Comentario</button>
+          </div>
+      </div>
+      <div class="col-lg-6 col-md-6 col-12 ">
+          <h4 class="border-bottom border-dark "><small>Ficha tecnica </small></h4>
+          
+          <card class="card-body">
+              <table class="table table-bordered table-hover table-stripped border-dark">
+                  <tbody>
+                      <tr>
+                          <td>Tamaño:</td> <td>130x250</td>
+                      </tr>
+                      <tr>
+                          <td>Pintura:</td> <td>Oleo</td>
+                      </tr>
+                      <tr>
+                          <td>Marco:</td> <td>Degradado</td>
+                      </tr>
+                      <tr>
+                          <td>Puntuacion:</td><td>5/7</td>
+                      </tr>
+                  </tbody>
+              </table>
+          </card>
+      </div>
+    </div>
+
+</main>
+{% endblock%}

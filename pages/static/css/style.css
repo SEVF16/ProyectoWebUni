@@ -1,0 +1,77 @@
+body {
+    background-position: bottom;
+   /* background-image: url("/img/—Pngtree—simple\ hand-painted\ chinese\ style\ banner_1090538.jpg");*/
+}
+
+main {
+    
+  /*  background-image: url("/img/—Pngtree—simple\ hand-painted\ chinese\ style\ banner_1090538.jpg"); */
+}
+
+header {
+    /*background-image: url("/img/—Pngtree—simple\ hand-painted\ chinese\ style\ banner_1090538.jpg"); */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
+}
+#nav-item {    
+    font-weight: 100;
+}
+
+#dropdown-item {    
+    font-weight: 100;
+}
+
+#btn {    
+    font-weight: 100;
+}
+
+#carrusel {
+    -webkit-box-shadow: 2px 2px 5px 5px #B3B8AE;
+    box-shadow: 2px 2px 5px 5px #B3B8AE;    
+}
+
+
+#carouselExampleCaptions {
+    margin: 0  auto;
+}
+
+.nav-link {    
+    margin-left: 10px;
+    font-size: 0.8em;      
+}
+
+#cards{  
+    margin-top: 10%; 
+    margin-bottom: 5%;
+}
+
+.foter{
+    padding-top: 2%;
+    padding-left: 10%;
+}
+
+#navbarDropdownMenuLink {
+    font-size: 1.5em;
+}
+
+#table {
+    background-color: #ffd369;  
+}
+
+a:link { 
+    text-decoration: none;
+
+}
+
+a:visited {
+    text-decoration: none; 
+    }
+
+a:hover {
+    text-decoration: none; 
+    }
+
+a:active {
+    text-decoration: none;
+    }
+

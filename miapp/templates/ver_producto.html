@@ -1,0 +1,152 @@
+    {% extends 'navegador.html'%}
+
+
+    {% block contenido%}
+
+    <main>
+        {% for product in producto%}
+        <div class="bg-light border-bottom border-dark">
+            <div class="container-fluid py-3 px-5"> 
+                <div class="row">   
+                    <ul class="breadcrumb  text-uppercase ">
+                        <li><a  class="dropdown-item border border-dark " href="sala.html">INICIO</a></li><p class="ms-1 me-1 fs-5">/</p>
+                        <li><a class="dropdown-item border border-dark "  href="infoproducto.html">Producto</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row  my-2 mx-2">
+          <!--Bloque carrusel-->
+          <div class="col-12 col-md-6 col-lg-5  my-2 mx-2" id="marco-imagen">
+            <img src="{{product.imagen.url}}" style ="width: 100%; border-radius: 6px; opacity: 0.85;">
+          </div>
+          <!--Bloque ficha técnica-->
+          <div class="col col-md col-lg mt-3 mt-md-0 my-2 mx-2">
+            <div >
+              <div class=" text-black text-left my-2 mx-2">
+                    <span class="fs-1">Naranja, Rojo y Azul</span>
+              </div>
+              <div class="card-body fs-4">
+                <div>
+                  <table class="table table-bordered table-hover table-stripped">
+                    <tbody>
+                      <tr>
+                          <td>Descripcion:</td><td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam labore, vel in eligendi eos iusto saepe consequuntur! In quasi temporibus earum, dolor vero aperiam, quos, maiores velit architecto beatae eveniet.</td>
+                      </tr>
+                      <tr>
+                          <td>Fecha:</td><td>Febrero 15, 2018</td>
+                      </tr>
+                      <tr>
+                          <td>Artista:</td><td>Artista 1</td>
+                      </tr>
+                      <tr>
+                          <td>Tipo de Obra:</td><td>Arte abstracto en óleo sobre tela</td>
+                      </tr>
+                      <tr>
+                          <td>Precio:</td><td>$175.000</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <div class="card-footer ">
+                    <div class="row ">
+                      <div class="col-6">
+                        <a href="carrito.html" class="btn btn-success btn-sm  my-2 mx-2">Comprar</a>
+                      </div>
+                      <div class="col text-end">                                   
+                        <a href="Artista1.html" class="btn btn-primary btn-sm  my-2 mx-2">Artista 1</a>
+                    </div>
+                  </div>
+                </div>
+              </div>    
+            </div>
+          </div>
+        </div>
+        {% endfor%}
+        <!--Bloque comentarios / ficha técnica-->
+        <div class="row ms-3  my-2 mx-2">
+          <div class="col-lg-6 col-md-6 col-12">
+              <ul class="nav nav-tabs  my-2 mx-2">
+                    <li><a>COMENTARIOS</a></li>
+              </ul>
+              <div class="form-floating">
+                  <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+                  <label for="floatingTextarea2">Comments</label>
+              </div>
+              <div class="col- my-2 mx-2">
+                  <button type="submit" class="btn btn-success my-2 mx-2">Enviar Comentario</button>
+              </div>
+          </div>
+          <div class="col-lg-6 col-md-6 col-12 ">
+              <h4 class="border-bottom border-dark "><small>Ficha tecnica </small></h4>
+              
+              <card class="card-body">
+                  <table class="table table-bordered table-hover table-stripped border-dark">
+                      <tbody>
+                          <tr>
+                              <td>Tamaño:</td> <td>130x250</td>
+                          </tr>
+                          <tr>
+                              <td>Pintura:</td> <td>Oleo</td>
+                          </tr>
+                          <tr>
+                              <td>Marco:</td> <td>Degradado</td>
+                          </tr>
+                          <tr>
+                              <td>Puntuacion:</td><td>5/7</td>
+                          </tr>
+                      </tbody>
+                  </table>
+              </card>
+          </div>
+        </div>
+        <div class="mt-">
+          <div class="container">
+              <div class="row">
+                  <div class="col-xs-12">
+                      <div class="col-sm-12 col-xs-12">
+                          <h2 class="border-bottom border-dark"><small>PRODUCTOS RELACIONADOS</small></h1>
+                      </div>
+                      <div class="col-sm-12 col-xs-12">
+                          <div class="card-group ms-3 " >
+                              <div class="card me-2">
+                                  <img src="img/pexels-toa-heftiba-şinca-1194420.jpg" class="card-img-top " alt="...">
+                                  <div class="card-body">
+                                      <h5 class="card-title">Muro con grafiti</h5>
+                                      <p class="card-text">fotografía selectiva, Artista 3</p>
+                                  </div>
+                                  <div class="card-footer">
+                                      <a href="muro-grafiti.html" class="btn btn-primary">Ver producto</a>
+                                  </div>
+                              </div>
+                              <div class="card me-2">
+                                  <img src="img/pexels-steve-johnson-1269968.jpg" class="card-img-top " alt="...">
+                                  <div class="card-body">
+                                      <h5 class="card-title">Naranja, rojo y azul</h5>
+                                      <p class="card-text">Arte abstracto en óleo sobre tela, Artista 1</p>
+                                  </div>
+                                  <div class="card-footer">
+                                      <a href="naranjo-rojo-azul.html" class="btn btn-primary">Ver producto</a>
+                                  </div>
+                              </div>
+                              <div class="card me-2">                      
+                                  <img src="img/pexels-steve-johnson-1292241.jpg" class="card-img-top" alt="...">                                          
+                                  <div class="card-body">
+                                      <h5 class="card-title">Azúl, blanco y naranjo</h5>
+                                      <p class="card-text">Acuarela sobre tela, Artista 1</p>
+                                  </div>
+                                  <div class="card-footer">
+                                      <a href="azul-blanco-naranjo.html" class="btn btn-primary">Ver producto</a>
+                                  </div>
+                                </div>
+                            </div>
+
+                      </div>
+                  </div>
+                  <div class="clearfix"></div>
+                  <hr>
+              </div>
+          </div>
+      </div>
+    </main>
+    {% endblock%}
+

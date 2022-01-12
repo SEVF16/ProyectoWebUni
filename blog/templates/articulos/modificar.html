@@ -1,0 +1,73 @@
+{% extends 'articulos/homeadmin.html'%}
+
+{% block contenido %}
+
+<div class="col-lg-4 col-md-6 col-12 mt-5 mb-5">
+    <div class="card">
+        <div class="card-header bg-dark text-light">
+            <span>Editar Producto</span>
+        </div>
+        <div class="card-body">
+            <form action="" method="post" id="producto-form" enctype="multipart/form-data">
+                {% csrf_token %}
+                
+                <div class="mb-3 has-validation">
+                    <label for="nombre-txt" class="form-label">Nombre del Producto</label>
+                    {{form.nombre}}
+                    <div class="invalid-feedback">
+                        Por favor ingrese nombre
+                    </div>
+                </div>
+                <div class="mb-3 has-validation">
+                    <label for="descripcion-txt" class="form-label">Imagen</label>
+                    {{form.imagen}}
+                    <div class="invalid-feedback">
+                        Por favor ingrese una descripcion
+                    </div>
+                </div>
+                <div class="mb-3 has-validation">
+                  <label for="artista-txt" class="form-label">Nombre del Artista</label>
+                  {{form.artista}}
+                  <div class="invalid-feedback">
+                      Por favor ingrese artista
+                  </div>
+                </div>
+              <div class="mb-3 has-validation">
+                <label for="fecha-txt" class="form-label">Descripcion</label>
+                {{form.descripcion}}
+                <div class="invalid-feedback">
+                    Por favor ingrese Fecha
+                </div>
+             </div>
+              <div class="my-3 has validation">
+                <div class="row my-1">
+                  <label for="file-selector" class="form-label">Categoria</label> 
+                  {{form.categorias}}
+                </div>                        
+              </div>
+              <div class="">
+                <label for="estado">Fecha de Creacion</label>
+                {{form.fecha_crea}}
+            </div>
+              <div class="">
+                  <label for="estado">estado</label>
+                  {{form.estado}}
+              </div>
+
+                <div class="mb-2">
+                    <div class="row mt-2">
+                        <div class="col-6">
+                            <button type="submit" class="btn btn-success">Modificar</button>
+                        </div>
+                        <div class="col text-end">
+                            <button type="button" id="limpiar-btn" class="btn btn-info">Limpiar</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+                {{mensaje}}
+        </div>
+    </div>
+</div>
+
+{% endblock %}  
